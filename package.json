@@ -1,0 +1,12 @@
+{
+  "name": "tip-calculator",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./src/style.css --watch"
+  },
+  "devDependencies": {
+    "vite": "^4.4.5"
+  }
+}
