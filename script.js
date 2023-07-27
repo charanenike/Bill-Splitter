@@ -20,25 +20,6 @@ let totalAmount = document.querySelector("#total-amount");
 // Tip buttons
 const btns = document.querySelectorAll(".tip--btn");
 const btnsContainer = document.querySelector("#tip--btns");
-/*
-const tipBtn1 = parseInt(
-  document.querySelector("#tip--btn-1").textContent.trim()
-);
-const tipBtn2 = parseInt(
-  document.querySelector("#tip--btn-2").textContent.trim()
-);
-
-const tipBtn3 = parseInt(
-  document.querySelector("#tip--btn-3").textContent.trim()
-);
-
-const tipBtn4 = parseInt(
-  document.querySelector("#tip--btn-4").textContent.trim()
-);
-
-const tipBtn5 = parseInt(
-  document.querySelector("#tip--btn-5").textContent.trim()
-); */
 
 // Percentage Buttons
 btnsContainer.addEventListener("click", function (e) {
@@ -85,43 +66,3 @@ resetBtn.addEventListener("click", function () {
   tipAmount.textContent = "0.00";
   totalAmount.textContent = "0.00";
 });
-
-/* 
-<div class="operations__tab-container">
-  <button class="btn operations__tab operations__tab--1" data-tab="1">
-    <span>01</span>Instant Transfers
-  </button>
-  <button class="btn operations__tab operations__tab--2" data-tab="2">
-    <span>02</span>Instant Loans
-  </button>
-  <button class="btn operations__tab operations__tab--3" data-tab="3">
-      <span>03</span>Instant Closing
-  </button>
-</div>
-
-
-const tabs = document.querySelectorAll('.operations__tab');
-const tabsContainer = document.querySelector('.operations__tab-container');
-
-
-tabsContainer.addEventListener('click', function (e) {
-  const clicked = e.target.closest('.operations__tab');
-  // console.log(clicked);
-
-  //Guard clause
-  if (!clicked) return;
-
-  //Remove Active classes
-  tabs.forEach(t => t.classList.remove('operations__tab--active'));
-  tabsContent.forEach(c => c.classList.remove('operations__content--active'));
-
-  //Activate tab
-  clicked.classList.add('operations__tab--active');
-
-  //Area content area
-  // console.log(clicked.dataset.tab);
-  document
-    .querySelector(`.operations__content--${clicked.dataset.tab}`)
-    .classList.add('operations__content--active');
-});
-*/
