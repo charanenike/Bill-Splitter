@@ -833,18 +833,6 @@ video {
     margin-top: 3.5rem;
   }
 
-  .lg\:mt-16 {
-    margin-top: 4rem;
-  }
-
-  .lg\:mt-8 {
-    margin-top: 2rem;
-  }
-
-  .lg\:mt-4 {
-    margin-top: 1rem;
-  }
-
   .lg\:mt-2 {
     margin-top: 0.5rem;
   }
@@ -919,5 +907,25 @@ video {
   .lg\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .lg\:placeholder\:text-xl::-moz-placeholder {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .lg\:placeholder\:text-xl::placeholder {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .lg\:placeholder\:text-2xl::-moz-placeholder {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .lg\:placeholder\:text-2xl::placeholder {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
