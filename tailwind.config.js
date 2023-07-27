@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        lg: "1440px",
+        lg: "1024px",
       },
       colors: {
         "primary-900": "hsl(183, 100%, 15%)",
