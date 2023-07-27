@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABO1BMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////l9Pff8fS54ein2eOn2eL9/v684unr9vj7/f7c8PSl2eKHzNil2OLv+Prz+vue1eB3xdOq2uPm9Pf29/vy8/n3/Py13+eEyteZ097P6u/2+/zByeKOm8r8/f7u+Pq+4+qOz9uU0dzo9fjb4O5meLbh5fH0+vvV7fHx+fv8/P2Gk8Wbps+44eim2eLW2+xkdrXO1Oit3OWttthperja3u7u+Pn6+/2hrNJneLfFy+P7+/23v92IlcbN0ufx8/nj5/Kbp9BsfbltfrqAj8ORnsvg5PD+/v/v8ffQ1em0vduqtNfn6vS/61TcAAAAHHRSTlMAAAQqbK3Z8v0DN5ff+xqJ6jbC/kHBAjjp3qz8qSKHsgAAAAFiS0dEAf8CLd4AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfiChMPAx5FOtlkAAABSUlEQVQ4y4WTZ2OCMBCGc4IMEXAPjB10771t7dLuXbv3/v+/oNigIYjN+4HcJU9CcgMhVxASxLAkK4oshUUhBIgVqBEtqmNXelSLqF4EwDBjmFHMNADoejyRxD4lE/EGAZCScICkFCGc/YHrDkHOACON2yhtOABkTNxWZgYQZHPeqWKH18tlAakas6ezi3E1FQl5Fuhm3LyARD0AsIs9vSSmIrJwC9DXPzA4NEx8C0ktwMjo2PiE3YgFkokxOdUEpmdm5+YXXEBGCjEWl5bpHVZKq2tlMq+gAjHWNza9r9jarpD5QuMX1Z3dv3Fvn72T3LzkweFRfSgd+xJGn3lyeuZ8K+csYNFAXVzWrqr+bDmBoqG+vqnd3t3bDOCE2push8en55fXNzZZTLrfPz6/vn+oX083t2C4JccvWm7Z8xuH33r85v2v/X8Bp/FiyVLnL/0AAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMTAtMTlUMTU6MDM6MzArMDI6MDCzEaEaAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTEwLTE5VDE1OjAzOjMwKzAyOjAwwkwZpgAAAFd6VFh0UmF3IHByb2ZpbGUgdHlwZSBpcHRjAAB4nOPyDAhxVigoyk/LzEnlUgADIwsuYwsTIxNLkxQDEyBEgDTDZAMjs1Qgy9jUyMTMxBzEB8uASKBKLgDqFxF08kI1lQAAAABJRU5ErkJggg=="
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+
+    <title>Tip calculator app</title>
+  </head>
+
+  <body class="font-spaceMono bg-primary-200">
+    <header>
+      <div class="p-10 grid place-content-center lg:mt-16">
+        <img src="../images/logo.svg" alt="logo" />
+      </div>
+    </header>
+    <div
+      class="lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:left-1/2 lg:-translate-x-1/2"
+    >
+      <main
+        class="bg-white rounded-t-3xl h-[85.5vh] lg:max-w-[940px] lg:h-fit lg:py-4 lg:rounded-2xl"
+      >
+        <div class="mx-7 mb-4 pt-8 grid gap-8 lg:grid lg:grid-cols-2 lg:pt-3">
+          <div>
+            <h1 class="mb-2 font-fw-bold-700 text-primary-400 tracking-tight">
+              Bill
+            </h1>
+            <div class="relative">
+              <img
+                src="../images/icon-dollar.svg"
+                alt=" dollar"
+                class="absolute top-1/2 -translate-y-1/2 pl-4"
+              />
+              <input
+                type="number"
+                name="bill"
+                id="bill"
+                placeholder="0"
+                value=""
+                class="bill bg-primary-100 w-full py-2 text-end pl-4 text-24 placeholder:text-primary-900 text-primary-900 pr-4 rounded-lg hover:outline hover:outline-2 hover:outline-primary-600 focus:outline focus:outline-2 focus:outline-primary-600 focus:caret-primary-600 lg:py-1"
+              />
+            </div>
+          </div>
+          <div>
+            <h1 class="font-fw-bold-700 text-primary-400 tracking-tight mb-3">
+              Select Tip %
+            </h1>
+            <div class="grid gap-4 grid-cols-2 lg:grid-cols-3" id="tip--btns">
+              <button
+                data-tab="1"
+                class="tip--btn bg-primary-900 w-full py-1 text-center text-white rounded-md pl-4 text-24 pr-4 hover:text-primary-900 hover:bg-primary-200 lg:py-2"
+                id="tip--btn-1"
+              >
+                5%
+              </button>
+              <button
+                data-tab="2"
+                class="tip--btn bg-primary-900 w-full py-1 text-center text-white rounded-md pl-4 text-24 pr-4 hover:text-primary-900 hover:bg-primary-200 lg:py-2"
+                id="tip--btn-2"
+              >
+                10%
+              </button>
+              <button
+                data-tab="3"
+                class="tip--btn bg-primary-900 w-full py-1 text-center text-white rounded-md pl-4 text-24 pr-4 hover:text-primary-900 hover:bg-primary-200 lg:py-2"
+                id="tip--btn-3"
+              >
+                15%
+              </button>
+              <button
+                data-tab="4"
+                class="tip--btn bg-primary-900 w-full py-1 text-center text-white rounded-md pl-4 text-24 pr-4 hover:text-primary-900 hover:bg-primary-200 lg:py-2"
+                id="tip--btn-4"
+              >
+                25%
+              </button>
+              <button
+                data-tab="5"
+                class="tip--btn bg-primary-900 w-full py-1 text-center text-white rounded-md pl-4 text-24 pr-4 hover:text-primary-900 hover:bg-primary-200 lg:py-2"
+                id="tip--btn-5"
+              >
+                50%
+              </button>
+              <input
+                type="number"
+                name="custom-tip-percentage"
+                id="custom-tip-percentage"
+                placeholder="Custom"
+                class="bg-primary-100 w-full py-2 text-end pl-4 text-24 text-primary-900 pr-4 rounded-lg hover:outline hover:outline-2 hover:outline-primary-600 focus:outline focus:outline-2 focus:outline-primary-600 focus:caret-primary-600 lg:pl-0"
+              />
+            </div>
+          </div>
+          <div>
+            <h1 class="mb-3 font-fw-bold-700 text-primary-400 tracking-tight">
+              Number of People
+            </h1>
+            <div class="relative">
+              <img
+                src="../images/icon-person.svg"
+                alt="person"
+                class="absolute top-1/2 -translate-y-1/2 pl-4"
+              />
+              <input
+                type="number"
+                name="people"
+                id="people"
+                placeholder="0"
+                class="bg-primary-100 text-end w-full py-2 pl-4 pr-4 placeholder:text-primary-900 text-primary-900 text-24 rounded-lg hover:outline hover:outline-2 hover:outline-primary-600 focus:outline focus:outline-2 focus:outline-primary-600 focus:caret-primary-600 lg:py-1"
+              />
+            </div>
+          </div>
+
+          <div
+            class="bg-primary-900 text-white px-6 pt-10 mt-3 rounded-2xl lg:col-start-2 lg:row-start-1 lg:row-end-4"
+          >
+            <div class="grid gap-8 mb-6 lg:gap-10">
+              <div class="flex justify-between w-full">
+                <h1 class="leading-5">
+                  Tip Amount <br /><span class="text-xs text-primary-400"
+                    >/ person</span
+                  >
+                </h1>
+                <h1
+                  class="flex items-center text-3xl text-primary-600 lg:text-5xl"
+                >
+                  $<span id="tip-amount">0.00</span>
+                </h1>
+              </div>
+              <div class="flex justify-between w-full">
+                <h1 class="leading-5">
+                  Total <br />
+                  <span class="text-xs text-primary-400">/ person</span>
+                </h1>
+                <h1
+                  class="flex items-center text-3xl text-primary-600 lg:text-5xl"
+                >
+                  $<span id="total-amount">0.00</span>
+                </h1>
+              </div>
+
+              <div
+                class="grid grid-cols-2 place-content-center gap-4 w-full lg:mt-14"
+              >
+                <button
+                  class="bg-primary-600 text-primary-900 py-2 text-xl rounded-md hover:bg-primary-200 lg:py-3"
+                  id="calculate--btn"
+                >
+                  CALCULATE
+                </button>
+                <button
+                  class="bg-primary-600 text-primary-900 py-2 text-xl rounded-md hover:bg-primary-200 lg:py-3"
+                  id="reset--btn"
+                >
+                  RESET
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+
+  <!-- 
+  <body class="font-spaceMono bg-primary-200">
+    <header>
+      <div class="p-10 grid place-content-center">
+        <img src="../images/logo.svg" alt="logo" />
+      </div>
+    </header>
+    <main class="bg-white rounded-t-3xl h-[85.5vh]">
+      <div class="mx-7 mb-4 pt-8 grid gap-8">
+        <div>
+          <h1 class="mb-2 font-fw-bold-700 text-primary-400 tracking-tight">
+            Bill
+          </h1>
+          <div class="relative">
+            <img
+              src="../images/icon-dollar.svg"
+              alt=" dollar"
+              class="absolute top-1/2 -translate-y-1/2 pl-4"
+            />
+            <input
+              type="number"
+              name="bill"
+              id="bill"
+              placeholder="0"
+              value=""
+              class="bill bg-primary-100 w-full py-2 text-end pl-4 text-24 placeholder:text-primary-900 text-primary-900 pr-4 rounded-lg hover:outline hover:outline-2 hover:outline-primary-600 focus:outline focus:outline-2 focus:outline-primary-600 focus:caret-primary-600"
+            />
+          </div>
+        </div>
+        <div>
+          <h1 class="font-fw-bold-700 text-primary-400 tracking-tight mb-3">
+            Select Tip %
+          </h1>
+          <div class="grid gap-4 grid-cols-2" id="tip--btns">
+            <button
+              data-tab="1"
+              class="tip--btn bg-primary-900 w-full py-1 text-center text-white rounded-md pl-4 text-24 pr-4 hover:text-primary-900 hover:bg-primary-200"
+              id="tip--btn-1"
+            >
+              5%
+            </button>
+            <button
+              data-tab="2"
+              class="tip--btn bg-primary-900 w-full py-1 text-center text-white rounded-md pl-4 text-24 pr-4 hover:text-primary-900 hover:bg-primary-200"
+              id="tip--btn-2"
+            >
+              10%
+            </button>
+            <button
+              data-tab="3"
+              class="tip--btn bg-primary-900 w-full py-1 text-center text-white rounded-md pl-4 text-24 pr-4 hover:text-primary-900 hover:bg-primary-200"
+              id="tip--btn-3"
+            >
+              15%
+            </button>
+            <button
+              data-tab="4"
+              class="tip--btn bg-primary-900 w-full py-1 text-center text-white rounded-md pl-4 text-24 pr-4 hover:text-primary-900 hover:bg-primary-200"
+              id="tip--btn-4"
+            >
+              25%
+            </button>
+            <button
+              data-tab="5"
+              class="tip--btn bg-primary-900 w-full py-1 text-center text-white rounded-md pl-4 text-24 pr-4 hover:text-primary-900 hover:bg-primary-200"
+              id="tip--btn-5"
+            >
+              50%
+            </button>
+            <input
+              type="number"
+              name="custom-tip-percentage"
+              id="custom-tip-percentage"
+              placeholder="Custom"
+              class="bg-primary-100 w-full py-2 text-end pl-4 text-24 text-primary-900 pr-4 rounded-lg hover:outline hover:outline-2 hover:outline-primary-600 focus:outline focus:outline-2 focus:outline-primary-600 focus:caret-primary-600"
+            />
+          </div>
+        </div>
+        <div>
+          <h1 class="mb-3 font-fw-bold-700 text-primary-400 tracking-tight">
+            Number of People
+          </h1>
+          <div class="relative">
+            <img
+              src="../images/icon-person.svg"
+              alt="person"
+              class="absolute top-1/2 -translate-y-1/2 pl-4"
+            />
+            <input
+              type="number"
+              name="people"
+              id="people"
+              placeholder="0"
+              class="bg-primary-100 text-end w-full py-2 pl-4 pr-4 placeholder:text-primary-900 text-primary-900 text-24 rounded-lg hover:outline hover:outline-2 hover:outline-primary-600 focus:outline focus:outline-2 focus:outline-primary-600 focus:caret-primary-600"
+            />
+          </div>
+        </div>
+
+        <div class="bg-primary-900 text-white px-6 pt-10 mt-3 rounded-2xl">
+          <div class="grid gap-8 mb-6">
+            <div class="flex justify-between w-full">
+              <h1 class="leading-5">
+                Tip Amount <br /><span class="text-xs text-primary-400"
+                  >/ person</span
+                >
+              </h1>
+              <h1 class="flex items-center text-3xl text-primary-600">
+                $<span id="tip-amount">0.00</span>
+              </h1>
+            </div>
+            <div class="flex justify-between w-full">
+              <h1 class="leading-5">
+                Total <br />
+                <span class="text-xs text-primary-400">/ person</span>
+              </h1>
+              <h1 class="flex items-center text-3xl text-primary-600">
+                $<span id="total-amount">0.00</span>
+              </h1>
+            </div>
+            <div class="">
+              <div class="grid grid-cols-2 place-content-center gap-4 w-full">
+                <button
+                  class="bg-primary-600 text-primary-900 py-2 text-xl rounded-md hover:bg-primary-200"
+                  id="calculate--btn"
+                >
+                  CALCULATE
+                </button>
+                <button
+                  class="bg-primary-600 text-primary-900 py-2 text-xl rounded-md hover:bg-primary-200"
+                  id="reset--btn"
+                >
+                  RESET
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body> -->
+</html>
