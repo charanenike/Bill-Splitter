@@ -837,6 +837,18 @@ video {
     margin-top: 4rem;
   }
 
+  .lg\:mt-8 {
+    margin-top: 2rem;
+  }
+
+  .lg\:mt-4 {
+    margin-top: 1rem;
+  }
+
+  .lg\:mt-2 {
+    margin-top: 0.5rem;
+  }
+
   .lg\:grid {
     display: grid;
   }
